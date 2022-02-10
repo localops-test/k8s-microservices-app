@@ -49,10 +49,14 @@ def ping():
 @app.route('/price', methods=['GET', 'POST'])
 def price():
 
+    print ("here")
+
     product = request.values.get('product')
 
     if product in products:
         return products[product]
+    else:
+        return {"error": "product not found"}
 
     
 
