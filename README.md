@@ -36,8 +36,8 @@ kind create cluster --name pr-k8s
 ```
 
 ```
-docker build -t pr-be ../backend/
-docker build -t pr-fe ../frontend/
+docker build -t pr-be backend/
+docker build -t pr-fe frontend/
 ```
 
 ```
@@ -58,7 +58,7 @@ kubectl port-forward svc/pr-fe 9090:80
 changes in the code
 
 ```
-docker build -t pr-fe../frontend/
+docker build -t pr-fe frontend/
 
 kind load docker-image pr-fe --name pr-k8s
 
