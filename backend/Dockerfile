@@ -4,7 +4,7 @@ ADD . ./app
 
 WORKDIR /app
 
-RUN pip3 install -r requirements.txt
+RUN pip3 install -r backend/requirements.txt
 
 EXPOSE 5003
 
